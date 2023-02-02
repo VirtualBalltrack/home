@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Virtual Balltrack - Blender</title>
+<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+<script type = "text/javascript">
+	var i = 0;
+	var loc = [
+			   "images/Blender/planet.jpg",
+	  		   "images/Blender/clipsInLandscape.jpg",
+			   "images/Blender/clipsInBowl.jpg",
+			   "images/Blender/smartphone.jpg",
+			   "images/Blender/cubeFractal.jpg",
+			   "images/Blender/goldBars.jpg",
+			   "images/Blender/grass.jpg",
+			   "images/Blender/rings.jpg"
+			  ]
+	
+	
+	function next()
+	{
+		i += 1;
+		
+		if (i > loc.length - 1)
+		{
+			i = 0;
+		}
+		
+		document.image.src = loc[i];
+	}
+	
+	
+	function previous()
+	{
+		i -= 1;
+		
+		if (i < 0)
+		{
+			i = loc.length - 1;
+		}
+		
+		document.image.src = loc[i];
+	}
+</script>
+
+<h1>Blender Projects - 3D Art & Modelling</h1>
+<br>
+
+<table>
+	<div style = "position: relative;">
+		<div style = "position: relative;">
+			<img name = "image" class = "galleryImage" src = "images/Blender/planet.jpg">
+		</div>
+		
+		<img src = "images/arrowLeft.png" onclick = "previous()" class = "arrowLeft">
+		<img src = "images/arrowRight.png" onclick = "next()" class = "arrowRight">
+	</div>
+</table>
+
+</body>
+
+</html>

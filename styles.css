@@ -7,30 +7,8 @@ body {
 }
 
 h1 {
-	font-size: 38px;
+	font-size: 32px;
 	color: #58a6ff;
-}
-
-.heading {
-	position: relative;
-	width: 100%;
-}
-
-.headingText {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-}
-
-.largeImage {
-	width: 100%;
-	height: auto;
-}
-
-.largeTable {
-	width: 100%;
-	height: auto;
 }
 
 .cell {
@@ -53,18 +31,74 @@ h1 {
 	border: 1px solid #8b949e;
 }
 
-.container {
-	display: flex;
+
+.headerCell {
+	padding: 0px;
+	border-spacing: 0px;
 }
 
-.leftImage {
-	position: left;
+
+.cellContainer {
+	position: relative;
+	text-align: center;
 }
 
-.rightText {
-	color: #c9d1d9;
+.cellText {
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	font-weight: bold;
+	font-size: 22px;
+	text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000,
+				  2px 2px 0 #000,
+				  2px 2px 0 #000;
 }
 
 .image {
-	width: 75px;
+	width: 256px;
+	height: 256px;
+	border-radius: 10px;
+}
+
+
+.galleryImage {
+    width: auto;
+    height: 85%;
+}
+
+
+.arrowLeft {
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	
+	width: 35px;
+	opacity: 0.5;
+	
+	transition-duration: 0.1s;
+	cursor: pointer;
+}
+
+.arrowLeft:hover {
+	opacity: 0.8;
+}
+
+
+.arrowRight {
+	position: absolute;
+	top: 50%;
+	right: 50px;
+	
+	width: 35px;
+	opacity: 0.5;
+	
+	transition-duration: 0.1s;
+	cursor: pointer;
+}
+
+.arrowRight:hover {
+	opacity: 0.8;
 }
